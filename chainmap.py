@@ -30,17 +30,20 @@ new_family = family.new_child(child_1)
 print(family is new_family)  # 结果为False，用new_child新生成了一个ChainMap
 print(new_family)  # 结果为ChainMap({'child_1': 5}, {'father': 1, 'friend_1': 3, 'friend_2': 4}, {'mother': 2})
 
-new_family_2 = family.new_child(child_2)
+new_family_2 = new_family.new_child(child_2)
 print(new_family_2)
 
 """
-结果为:ChainMap({'child_2': 6}, {'father': 1, 'friend_1': 3, 'friend_2': 4}, {'mother': 2})
-会用child_2替换child_1的位置，也就是把child_1删除，把child_2放到child_1的位置
+结果为:ChainMap({'child_2': 6},{'child_1': 5}, {'father': 1, 'friend_1': 3, 'friend_2': 4}, {'mother': 2})
+会依次往前添加新的映射child_2
+
 """
 
 print(new_family.parents)  # 结果为ChainMap({'father': 1, 'friend_1': 3, 'friend_2': 4}, {'mother': 2})
 print(new_family.parents.parents)  # 结果为ChainMap({'mother': 2})
 
+
+print(dict(new_family_2))  # 可以转化为普通字典
 
 """
 总结:
