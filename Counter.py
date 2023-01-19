@@ -13,7 +13,7 @@ res.subtract("a")
 print(res)  # 结果为Counter({'a': 4, 'b': 2, 'c': 2, 'd': 1}),将a的数量减去了1
 
 
-res["a"]=23
+print(dict(res)) #Counter可以变为普通dict
 
 
 
