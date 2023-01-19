@@ -1,0 +1,14 @@
+集合是专门的容器数据类型（Container Datatype），可以替代Python的通用内置容器，如dict、list、set和tuple。容器是一种特殊用途的对象，可用于存储不同的对象。
+它提供了一种访问所包含对象并遍历它们的方法。
+
+Python提供了实现容器数据类型的collections模块。在章节系列中，我们将学习集合模块中的不同类型集合融洽，其中包括：
+
+ChainMap
+Counter
+Deque
+DefaultDict
+NamedTuple
+OrderedDict
+UserDict
+UserList
+UserString
