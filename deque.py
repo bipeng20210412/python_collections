@@ -34,3 +34,15 @@ print(res1)  # 结果为deque([2, 3, 4, 5, 6], maxlen=5)
 2:deque 有一些方法和list一样，用法也一样。
 
 """
+
+date:2023-02-2
+time:22:47
+author:bipeng
+"""
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+print(deque(li, 4))  # 结果为deque([8, 9, 10, 11], maxlen=4) 会取一个Iterable的最后几个数
+
+
+
+
